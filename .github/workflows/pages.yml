@@ -75,7 +75,7 @@ jobs:
                   return;
               }
 
-              if (!/\\.html?$/i.test(destination.pathname) &&
+              if (!/\.html?$/i.test(destination.pathname) &&
                   !destination.pathname.endsWith('/')) {
                   return;
               }
@@ -99,7 +99,7 @@ jobs:
               if marker not in page.lower():
                   continue
               index = page.lower().rfind(marker)
-              page = page[:index] + script + "\\n" + page[index:]
+              page = page[:index] + script + "\n" + page[index:]
               path.write_text(page, encoding="utf-8")
 
           print(f"已为 {len(html_files)} 个 HTML 页面添加原生导航回退")
